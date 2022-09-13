@@ -6,8 +6,8 @@ const outputTextAreaEl = document.querySelector(".output");
 function constructURL(inputString) {
   const key = `text`;
   const server1 = `https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json`;
-  // const server2 = ``;
-  const serverURL = server1;
+  const server2 = `https://api.funtranslations.com/translate/yoda.json`;
+  const serverURL = server2;
   const url = `${serverURL}?${key}=${inputString}`;
   return url;
 }
