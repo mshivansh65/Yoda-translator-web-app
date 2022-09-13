@@ -6,6 +6,7 @@ const outputTextAreaEl = document.querySelector(".output");
 function constructURL(inputString) {
   const key = `text`;
   const server1 = `https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json`;
+  // const server2 = ``;
   const serverURL = server1;
   const url = `${serverURL}?${key}=${inputString}`;
   return url;
@@ -24,8 +25,9 @@ function translate(inputString) {
 
 btnTranslate.addEventListener("click", function (e) {
   let inputText = inputTextAreaEl.value;
-
+  outputTextAreaEl.textContent = "";
   if (inputText) {
+    outputTextAreaEl.setAttribute("placeholder", "processing please wait!");
     translate(inputText);
     // changeButton().then(translate(inputText)).then(changeButton);
   }
