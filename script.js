@@ -20,6 +20,9 @@ function translate(inputString) {
     .then((json) => {
       // console.log(json.contents.translated);
       outputTextAreaEl.textContent = json.contents.translated;
+    })
+    .catch((err) => {
+      outputTextAreaEl.textContent = `Sorry! Please try after some time`;
     });
 }
 
